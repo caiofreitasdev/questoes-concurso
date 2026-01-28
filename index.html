@@ -40,7 +40,7 @@
 
         header h1 {
             font-size: 2.4rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         header p {
@@ -53,7 +53,7 @@
             display: inline-block;
             background-color: var(--secondary);
             color: white;
-            padding: 14px 30px;
+            padding: 12px 26px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
@@ -62,6 +62,46 @@
 
         .btn:hover {
             background-color: #1e40af;
+        }
+
+        /* ===== COLUNAS PDF TOPO ===== */
+        .top-pdfs {
+    max-width: 1100px;
+    margin: 30px auto 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* diminui o min-width */
+    gap: 15px; /* espaçamento menor */
+}
+
+
+        .top-card {
+    background: white;
+    color: var(--text);
+    padding: 12px 10px; /* menos espaço interno */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+
+       .top-card h3 {
+    color: var(--primary);
+    font-size: 0.95rem; /* menor fonte */
+    line-height: 1.2; 
+    margin-bottom: 8px;
+    height: 2.4em; /* limita a 2 linhas */
+    overflow: hidden; /* corta o excesso */
+}
+
+
+        .top-card p {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        .top-card .price {
+            margin: 10px 0;
+            font-weight: bold;
+            color: var(--secondary);
         }
 
         section {
@@ -77,6 +117,7 @@
             text-align: center;
         }
 
+        /* BENEFÍCIOS */
         .benefits ul {
             list-style: none;
             display: grid;
@@ -134,7 +175,6 @@
             header h1 {
                 font-size: 1.9rem;
             }
-
             .logo {
                 width: 110px;
             }
@@ -143,99 +183,106 @@
 </head>
 <body>
 
-    <!-- HERO -->
-    <header>
-        <!-- LOGO -->
-        <img src="img/RAVEN.jpeg" alt="Raven Questões" class="logo">
+<!-- HERO -->
+<header>
+    <img src="img/RAVEN.jpeg" alt="Raven Questões" class="logo">
 
-        <h1>Questões Inéditas para Concurso Público</h1>
-        <p>
-            Treine com um material focado no que realmente cai em prova,
-            desenvolvido com base no padrão das principais bancas examinadoras.
-        </p>
+    <h1>Simulados Inéditos para Concurso Público</h1>
+     <p>
+        Treine com um material focado no que realmente cai em prova,
+        desenvolvido com base no padrão das principais bancas examinadoras.
+    </p>
 
-        <!-- BOTÃO ÚNICO (CTA) -->
-        <a href="#comprar" class="btn">Comprar agora</a>
-    </header>
-
-    <!-- BENEFÍCIOS -->
-    <section class="benefits">
-        <h2>O que você vai encontrar neste material</h2>
-        <ul>
-            <li>📘 Questões inéditas e atualizadas</li>
-            <li>🧠 Nível de dificuldade compatível com prova real</li>
-            <li>📝 Gabarito comentado, com explicação objetiva</li>
-            <li>🎯 Foco nos temas mais cobrados pelas bancas</li>
-            <li>⏱ Ideal para revisões e simulados</li>
-            <li>📱 Acesso fácil em qualquer dispositivo</li>
-        </ul>
-    </section>
-
-    <!-- PARA QUEM É -->
-    <section>
-        <h2>Para quem este material é indicado</h2>
-        <div class="highlight">
-            <p>
-                Este PDF é indicado para estudantes que estão se preparando
-                para concursos públicos e desejam aprimorar o desempenho por
-                meio da resolução de questões bem elaboradas, objetivas e
-                alinhadas com o padrão das provas.
-            </p>
-        </div>
-    </section>
-
-    <!-- COMO FOI FEITO -->
-    <section>
-        <h2>Como este material foi elaborado</h2>
-        <p>
-            As questões foram desenvolvidas por especialistas com ampla
-            experiência em concursos públicos, a partir da análise de provas
-            anteriores, jurisprudência relevante e recorrência de temas
-            cobrados pelas principais bancas examinadoras.
-        </p>
-    </section>
-
-    <!-- OFERTA -->
-    <section id="comprar">
-        <div class="offer">
-            <h2>Garanta agora seu acesso</h2>
-            <p>📄 PDF com 100 questões comentadas</p>
-            <p>📩 Entrega automática por e-mail</p>
-
+    <!-- COLUNAS NO TOPO -->
+    <div class="top-pdfs">
+        <div class="top-card">
+            <h3> Técnico Legislativo da Câmara dos Deputados - Conhecimentos Gerais </h3>
+            <p>📄 90 questões</p>
+            
             <div class="price">R$ 52,90</div>
-
-            <a href="https://mpago.li/1BWbGQD" target="_blank" class="btn">
-                Comprar agora
-            </a>
-
-            <p style="margin-top:15px; font-size:0.9rem;">
-                Acesso imediato após a confirmação do pagamento
-            </p>
+           <a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank"  class="btn">Comprar</a>
         </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <h2>Perguntas frequentes</h2>
+        
 
-        <p><strong>Como recebo o material?</strong><br>
-        Após a confirmação do pagamento, o link para download será enviado automaticamente para seu e-mail.</p>
+    
+    
+</header>
 
-        <p><strong>O material é atualizado?</strong><br>
+<!-- BENEFÍCIOS -->
+<section class="benefits">
+    <h2>O que você vai encontrar neste material</h2>
+    <ul>
+        <li>📘 Questões inéditas e atualizadas</li>
+        <li>🧠 Nível de dificuldade compatível com prova real</li>
+        <li>📝 Gabarito comentado</li>
+        <li>🎯 Foco nos temas mais cobrados</li>
+        <li>⏱ Ideal para revisões e simulados</li>
+        <li>📱 Acesso fácil em qualquer dispositivo</li>
+    </ul>
+</section>
+
+<!-- PARA QUEM É -->
+<section>
+    <h2>Para quem este material é indicado</h2>
+    <div class="highlight">
+        <p>
+            Este PDF é indicado para estudantes que estão se preparando
+            para concursos públicos e desejam aprimorar o desempenho
+            por meio da resolução de questões bem elaboradas.
+        </p>
+    </div>
+</section>
+
+<!-- COMO FOI FEITO -->
+<section>
+    <h2>Como este material foi elaborado</h2>
+    <p>
+        As questões foram desenvolvidas a partir da análise de provas
+        anteriores, jurisprudência relevante e recorrência de temas
+        cobrados pelas principais bancas examinadoras.
+    </p>
+</section>
+
+<!-- OFERTA -->
+<section id="comprar">
+    <div class="offer">
+        <h2>Garanta agora seu acesso</h2>
+        <p>📄 PDF com 100 questões comentadas</p>
+        <p>📩 Entrega automática por e-mail</p>
+
+        <div class="price">R$ 52,90</div>
+
+        <a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank" class="btn">
+            Comprar agora
+        </a>
+
+        <p style="margin-top:15px; font-size:0.9rem;">
+            Acesso imediato após a confirmação do pagamento
+        </p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <h2>Perguntas frequentes</h2>
+
+    <p><strong>Como recebo o material?</strong><br>
+    Após a confirmação do pagamento, o link para download será enviado automaticamente para seu e-mail.</p>
+
+    <p><strong>O material é atualizado?</strong><br>
         Sim. As questões seguem o padrão atual das provas e os temas mais recorrentes.</p>
 
-        <p><strong>Posso acessar pelo celular?</strong><br>
+
+    <p><strong>Posso acessar pelo celular?</strong><br>
         Sim. O PDF pode ser acessado em celular, tablet ou computador.</p>
-    </section>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 — Raven Questões</p>
-        <p>Todos os direitos reservados</p>
-    </footer>
-
+<footer>
+    <p>© 2026 — Raven Questões</p>
+    <p>Todos os direitos reservados</p>
+</footer>
 
 <script src="app.js"></script>
-
 </body>
 </html>
