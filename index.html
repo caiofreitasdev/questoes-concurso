@@ -1,215 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questões para Concurso | PDF Comentado</title>
-
-    <style>
-        :root {
-            --primary: #1f2933;
-            --secondary: #2563eb;
-            --light: #f9fafb;
-            --text: #374151;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1f2933, #111827);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .logo {
-            width: 140px;
-            margin-bottom: 25px;
-        }
-
-        header h1 {
-            font-size: 2.4rem;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 12px 26px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #1e40af;
-        }
-
-        /* ===== COLUNAS PDF TOPO ===== */
-        .top-pdfs {
-    max-width: 1100px;
-    margin: 30px auto 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* diminui o min-width */
-    gap: 15px; /* espaçamento menor */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questões para Concurso | PDF Comentado</title>
+<style>
+:root {
+    --primary: #1f2933;
+    --secondary: #2563eb;
+    --light: #f9fafb;
+    --text: #374151;
+    --accent: #f59e0b;
+    --accent-dark: #b45309;
 }
 
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, Helvetica, sans-serif; }
+body { background-color: var(--light); color: var(--text); line-height:1.6; }
 
-        .top-card {
-    background: white;
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #1f2933, #111827);
+    color: white;
+    padding: 80px 20px 60px 20px;
+    text-align: center;
+}
+.logo { width:140px; margin-bottom:25px; }
+header h1 { font-size:2.4rem; margin-bottom:20px; }
+header p { font-size:1.1rem; max-width:700px; margin:0 auto 30px; }
+
+.btn {
+    display:inline-block;
+    background-color: var(--secondary);
+    color:white;
+    padding:12px 26px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+.btn:hover { background-color:#1e40af; transform:translateY(-2px); }
+
+.top-pdfs {
+    max-width:1100px;
+    margin:30px auto 10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+    gap:20px;
+    padding:0 10px;
+}
+.top-card {
+    background:white;
     color: var(--text);
-    padding: 12px 10px; /* menos espaço interno */
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    padding:18px 14px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+.top-card h3 { 
+    color: var(--primary); 
+    font-size:1.2rem;
+    line-height:1.4; 
+    margin-bottom:12px; 
+    font-weight:bold;
+}
+.top-card p { font-size:1rem; margin-bottom:8px; }
+.top-card .price { margin:12px 0; font-weight:bold; color: var(--secondary); }
+
+section { padding:60px 20px; max-width:900px; margin:auto; }
+section h2 { font-size:2rem; margin-bottom:25px; color: var(--primary); text-align:center; }
+.benefits ul { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:0; }
+.benefits li { background:white; padding:22px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.benefits li:hover { transform:translateY(-4px); }
+
+.highlight { 
+    background-color:#eef2ff; 
+    border-left:5px solid var(--secondary); 
+    padding:22px; 
+    border-radius:8px; 
 }
 
-
-       .top-card h3 {
+/* AUMENTANDO FONTES DOS PARÁGRAFOS */
+.highlight p {
+    font-size: 1.4rem; /* maior para destaque */
+    line-height:1.7;
+    font-weight:500;
     color: var(--primary);
-    font-size: 0.95rem; /* menor fonte */
-    line-height: 1.2; 
-    margin-bottom: 8px;
-    height: 2.4em; /* limita a 2 linhas */
-    overflow: hidden; /* corta o excesso */
+}
+section:nth-of-type(3) p { 
+    font-size: 1.3rem; /* seção "Como este material foi elaborado" */
+    line-height:1.6;
 }
 
+.offer { background:white; text-align:center; border-radius:12px; padding:50px 20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s; position: relative; }
+.offer:hover { transform:translateY(-4px); }
+.offer p { font-size:1.1rem; margin-bottom:12px; }
+.price { font-size:2rem; font-weight:bold; color: var(--secondary); margin:20px 0; }
+.faq p { margin-bottom:22px; }
 
-        .top-card p {
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
+footer { background-color:#111827; color:#d1d5db; text-align:center; padding:25px 15px; font-size:0.9rem; }
 
-        .top-card .price {
-            margin: 10px 0;
-            font-weight: bold;
-            color: var(--secondary);
-        }
+/* ===== CRONÔMETRO DIGITAL ESTILO DESPERTADOR ===== */
+.timer-wrapper { text-align:center; margin:40px auto; }
+.timer-message { font-size:1.8rem; font-weight:bold; margin-bottom:20px; color: var(--secondary); text-shadow:1px 1px 2px rgba(0,0,0,0.2); }
+.digital-clock {
+    display:inline-block;
+    background-color: #111827;
+    color: #f59e0b;
+    font-family: 'Digital-7', monospace, Arial;
+    font-size:3rem;
+    padding:20px 40px;
+    border-radius:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    letter-spacing:5px;
+}
+.digital-clock.warning { background-color: var(--accent-dark); color:white; animation: blink 1s infinite; }
+@keyframes blink { 0%,50%,100%{opacity:1;} 25%,75%{opacity:0.5;} }
 
-        section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section h2 {
-            font-size: 1.9rem;
-            margin-bottom: 25px;
-            color: var(--primary);
-            text-align: center;
-        }
-
-        /* BENEFÍCIOS */
-        .benefits ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .benefits li {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .highlight {
-            background-color: #eef2ff;
-            border-left: 5px solid var(--secondary);
-            padding: 20px;
-            border-radius: 6px;
-        }
-
-        .offer {
-            background-color: white;
-            text-align: center;
-            border-radius: 10px;
-            padding: 40px 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-        }
-
-        .offer p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--secondary);
-            margin: 20px 0;
-        }
-
-        .faq p {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #111827;
-            color: #d1d5db;
-            text-align: center;
-            padding: 25px 15px;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.9rem;
-            }
-            .logo {
-                width: 110px;
-            }
-        }
-    </style>
+@media (max-width:600px) {
+    header h1 { font-size:1.9rem; }
+    .logo { width:110px; }
+    .digital-clock { font-size:2.2rem; padding:16px 28px; }
+    .timer-message { font-size:1.4rem; }
+    .highlight p { font-size:1.2rem; }
+    section:nth-of-type(3) p { font-size:1.15rem; }
+}
+</style>
 </head>
 <body>
 
-<!-- HERO -->
 <header>
     <img src="img/RAVEN.jpeg" alt="Raven Questões" class="logo">
-
     <h1>Simulados de Questões Objetivas para Concurso Público</h1>
-     <p>
-        Treine com um material focado no que realmente cai em prova,
-        desenvolvido com base no padrão das principais bancas examinadoras.
-    </p>
+    <p>Treine com um material focado no que realmente cai em prova, desenvolvido com base no padrão das principais bancas examinadoras.</p>
 
-    <!-- COLUNAS NO TOPO -->
     <div class="top-pdfs">
         <div class="top-card">
-            <h3> Técnico Legislativo da Câmara dos Deputados - Conhecimentos Gerais </h3>
+            <h3>Técnico Legislativo da Câmara dos Deputados - Conhecimentos Gerais</h3>
             <p>📄 90 questões</p>
-            
-            <div class="price">R$ 52,90</div>
-           <a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank"  class="btn">Comprar</a>
+            <div class="price">R$ 39,90</div>
+            <a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank" class="btn">Comprar</a>
         </div>
-
-        
-
-    
-    
+    </div>
 </header>
 
-<!-- BENEFÍCIOS -->
+<!-- CRONÔMETRO DIGITAL -->
+<div class="timer-wrapper">
+    <div id="timer-message" class="timer-message">⚡ Promoção especial! Acaba em:</div>
+    <div id="digital-timer" class="digital-clock">19:23:45</div>
+</div>
+
 <section class="benefits">
     <h2>O que você vai encontrar neste material</h2>
     <ul>
@@ -222,67 +161,72 @@
     </ul>
 </section>
 
-<!-- PARA QUEM É -->
 <section>
-    <h2>Para quem este material é indicado</h2>
-    <div class="highlight">
-        <p>
-            Este PDF é indicado para estudantes que estão se preparando
-            para concursos públicos e desejam aprimorar o desempenho
-            por meio da resolução de questões bem elaboradas.
-        </p>
-    </div>
+<h2>Para quem este material é indicado</h2>
+<div class="highlight">
+<p>Este PDF é indicado para estudantes que estão se preparando para concursos públicos e desejam aprimorar o desempenho por meio da resolução de questões bem elaboradas.</p>
+</div>
 </section>
 
-<!-- COMO FOI FEITO -->
 <section>
-    <h2>Como este material foi elaborado</h2>
-    <p>
-        As questões foram desenvolvidas a partir da análise de provas
-        anteriores, jurisprudência relevante e recorrência de temas
-        cobrados pelas principais bancas examinadoras.
-    </p>
+<h2>Como este material foi elaborado</h2>
+<p>As questões foram desenvolvidas a partir da análise de provas anteriores, jurisprudência relevante e recorrência de temas cobrados pelas principais bancas examinadoras.</p>
 </section>
 
-<!-- OFERTA -->
 <section id="comprar">
-    <div class="offer">
-        <h2>Garanta agora seu acesso</h2>
-        <p>📄 PDF com 90 questões comentadas</p>
-        <p>📩 Entrega automática por e-mail</p>
+<div class="offer">
+<h2>Garanta agora seu acesso</h2>
+<p>📄 PDF com 90 questões comentadas</p>
+<p>📩 Entrega automática por e-mail</p>
+<div class="price">R$ 39,90</div>
+<a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank" class="btn">Comprar agora</a>
+<h2 style="margin-top:20px;">Estude com estratégia, não com sorte 🎯</h2>
 
-        <div class="price">R$ 52,90</div>
-
-        <a href="https://pay.kiwify.com.br/Su3nBhZ" target="_blank" class="btn">
-            Comprar agora
-        </a>
-
-        <p style="margin-top:15px; font-size:0.9rem;">
-            Acesso imediato após a confirmação do pagamento
-        </p>
-    </div>
+<p style="margin-top:15px; font-size:3rem; color:#b45309; font-weight:bold;">
+⚡  Tempo limitado! O foco nos estudos começa agora!
+</p>
+</div>
 </section>
 
-<!-- FAQ -->
 <section class="faq">
-    <h2>Perguntas frequentes</h2>
-
-    <p><strong>Como recebo o material?</strong><br>
-    Após a confirmação do pagamento, o link para download será enviado automaticamente para seu e-mail.</p>
-
-    <p><strong>O material é atualizado?</strong><br>
-        Sim. As questões seguem o padrão atual das provas e os temas mais recorrentes.</p>
-
-
-    <p><strong>Posso acessar pelo celular?</strong><br>
-        Sim. O PDF pode ser acessado em celular, tablet ou computador.</p>
+<h2>Perguntas frequentes</h2>
+<p><strong>Como recebo o material?</strong><br>Após a confirmação do pagamento, o link para download será enviado automaticamente para seu e-mail.</p>
+<p><strong>O material é atualizado?</strong><br>Sim. As questões seguem o padrão atual das provas e os temas mais recorrentes.</p>
+<p><strong>Posso acessar pelo celular?</strong><br>Sim. O PDF pode ser acessado em celular, tablet ou computador.</p>
 </section>
 
 <footer>
-    <p>© 2026 — Raven Questões</p>
-    <p>Todos os direitos reservados</p>
+<p>© 2026 — Raven Questões</p>
+<p>Todos os direitos reservados</p>
 </footer>
 
-<script src="app.js"></script>
+<script>
+// CRONÔMETRO 19H23M45S
+let totalSeconds = 19*3600 + 23*60 + 45;
+const digitalTimer = document.getElementById('digital-timer');
+const messageEl = document.getElementById('timer-message');
+
+function updateDigitalTimer(){
+    const h = Math.floor(totalSeconds/3600);
+    const m = Math.floor((totalSeconds%3600)/60);
+    const s = totalSeconds%60;
+    digitalTimer.textContent = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+
+    if(totalSeconds <= 120){ // últimos 2 minutos
+        messageEl.textContent="⏳ Promoção quase acabando! Aproveite agora!";
+        digitalTimer.classList.add('warning');
+    }
+
+    if(totalSeconds>0) totalSeconds--;
+    else { 
+        digitalTimer.textContent="00:00:00"; 
+        messageEl.textContent="⏳ Promoção finalizada!"; 
+        digitalTimer.classList.remove('warning');
+    }
+}
+setInterval(updateDigitalTimer,1000);
+updateDigitalTimer();
+</script>
+
 </body>
 </html>
